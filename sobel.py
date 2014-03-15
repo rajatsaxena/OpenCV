@@ -1,6 +1,7 @@
 import cv2
 import cv2.cv as cv
 import numpy as np
+import matplotlib
 
 def sobel(filename, gray=True, dx=1, dy=1, ksize=3):
     if gray:
@@ -16,3 +17,6 @@ def sobel(filename, gray=True, dx=1, dy=1, ksize=3):
     t = cv2.convertScaleAbs(dst,t,cscale,shift/255.0)
     return t
 
+img=sobel('rajat.JPG')
+imshow(img)
+show()
